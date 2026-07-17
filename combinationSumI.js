@@ -2,10 +2,10 @@
 // ex: candidates = [2,3,6,7], target = 7      ans: [[2,2,3],[7]]
 
 const combinationSumI = (index, arr, ds, target, output) => {
+    if (target === 0) {
+        output.push([...ds]);
+    }
     if (index === arr.length) {
-        if (target === 0) {
-            output.push([...ds]);
-        }
         return;
     }
     if (target >= arr[index]) {
